@@ -1,0 +1,56 @@
+/**
+ * Created by 吴天祥 on 2018/8/6 19:56
+ * Develop by 吴天祥 on 2018/8/6 19:56
+ */
+const DAY_MILLISECOND = 24 * 60 * 60 * 1000;
+
+const isLeapYear = year => (year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0);
+
+const getMonthLastDay = (year, month) => {
+  switch (month + 1) {
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      return 30;
+    case 2:
+      return isLeapYear(year) ? 29 : 28;
+    default:
+      return 31;
+  }
+};
+
+const getCalenderDays = (yearMonth, count) => {
+  const dayCount = count || 42;
+  const days = [];
+  const firstDay = `${yearMonth.getFullYear()}-${yearMonth.getMonth() + 1}-01 00:00:000`;
+  const firstTime = new Date(firstDay).getTime();
+  let firstIdx = new Date(firstDay).getDay();
+  firstIdx = firstIdx === 0 ? 6 : firstIdx - 1;
+  for (let i = 0; i < dayCount; i += 1) {
+    days.push(new Date(firstTime + DAY_MILLISECOND * (i - firstIdx)));
+  }
+  return days;
+};
+
+const offsetYearMonth = (offsetMonth, currentDate) => {
+  let nowYear = currentDate.getFullYear();
+  let nowMonth = currentDate.getMonth();
+  const today = currentDate.getDate();
+  if (nowMonth + offsetMonth === -1) {
+    nowMonth = 11;
+    nowYear -= 1;
+  } else if (nowMonth + offsetMonth === 12) {
+    nowMonth = 0;
+    nowYear += 1;
+  } else {
+    nowMonth += offsetMonth;
+  }
+  const lastDay = getMonthLastDay(nowYear, nowMonth);
+  return new Date(nowYear, nowMonth, lastDay < today ? lastDay : today);
+};
+
+export default {
+  getCalenderDays,
+  offsetYearMonth,
+};

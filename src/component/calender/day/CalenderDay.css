@@ -1,0 +1,72 @@
+/* Created by 吴天祥 on 2018/7/13 11:13 */
+/* Develop by 吴天祥 on 2018/7/13 11:13 */
+* {
+  box-sizing: border-box;
+}
+
+.day {
+  width: 100%;
+}
+
+.day__row {
+  width: 100%;
+  text-align: center;
+}
+
+.day__row__item {
+  display: inline-block;
+  width: 3.77rem;
+  height: 3.77rem;
+  line-height: 3.77rem;
+  text-align: center;
+  vertical-align: top;
+  color: #aaa;
+  margin-bottom: 1.5rem !important;
+  font-size: 1.6rem;
+
+}
+
+.day__row--current {
+  color: #333;
+}
+
+.day__row__item button {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border: 0;
+  background: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.button-active  {
+  background: #FAAD14 !important;
+  color: #FFF;
+}
+
+.day__row__item--prepared:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: .6rem;
+  height: .6rem;
+  top: calc(50% + 2rem);
+  left: calc(50% - .3rem);
+  border-radius: 50%;
+  background: #E05838;
+}
+
+.day__row__item--no-prepared:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: .6rem;
+  height: .6rem;
+  top: calc(50% + 2rem);
+  left: calc(50% - .3rem);
+  border-radius: 50%;
+  background: #F69A6E;
+}

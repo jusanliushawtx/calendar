@@ -1,0 +1,4 @@
+*.js linguist-language=React, javascript, antd
+*.jsx linguist-language=React, javascript, antd
+   *.css linguist-language=React, javascript, antd
+   *.html linguist-language=React, javascript, antd

@@ -1,0 +1,25 @@
+/* Created by 吴天祥 on 2018/7/13 10:40 */
+/* Develop by 吴天祥 on 2018/7/13 10:40 */
+
+.body {
+
+}
+
+.body__row {
+}
+
+.body__header {
+  margin-bottom: 2.0rem;
+  text-align: center;
+}
+
+.body__row__item, .body__header__item {
+  width: 3.77rem;
+  height: 3.77rem;
+  text-align: center;
+  font-size: 1.2rem;
+  display: inline-block;
+  vertical-align: top;
+  color: #A6A4A4;
+  line-height: 3.77rem;
+}

@@ -1,0 +1,42 @@
+/* Created by 吴天祥 on 2018/7/13 14:56 */
+/* Develop by 吴天祥 on 2018/7/13 14:56 */
+.header {
+  width: 100%;
+  margin-bottom: 2.0rem;
+  margin-top: 2.0rem;
+}
+
+.header:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.header__left {
+  float: left;
+  font-size: 1.6rem;
+  color: #464646;
+}
+
+.header__left__month {
+  display: inline-block;
+  margin-right: 1.6rem;
+}
+
+.header__left__year {
+  display: inline-block;
+}
+
+.header__right {
+  float: right;
+}
+
+.header__right button {
+  width: 6.6rem;
+  height: 2.6rem;
+  background: #F8F8F8 !important;
+  outline: none;
+  border-radius: .3rem;
+  border: 0;
+  cursor: pointer;
+}
